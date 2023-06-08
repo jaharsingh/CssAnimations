@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Define the animation */
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      *{
+        margin: 0;
+        padding: 0;
+        background-color: #d3dcc1;
+      }
+
+      /* Apply the animation to an element */
+      .box {
+        margin-left: 600px;
+        margin-top: 200px;
+        width: 100px;
+        height: 100px;
+        background-color: #1f0de1;
+        position: relative;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        
+     
+      }
+
+      /* Add a pseudo-element for decoration */
+      .box::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 5px solid #83e207;
+        z-index: -1;
+      }
+
+h1{
+    font-size: bold;
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+    color: #010000;
+}
+
+    </style>
+  </head>
+  <body>
+ <h1>CSS Animations</h1>
+    <div class="box"></div>
+
+  </body>
+</html>
